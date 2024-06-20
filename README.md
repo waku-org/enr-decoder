@@ -16,16 +16,16 @@ Sample Usage
 Decoded ENR:
 seq: 1718856360688
 signature: 0x1f25d715762005aff7bbf629404f1514183a2e02aaefbc458420d522a08cd361182c7d80187f152548b0acf79c3536b15eef2d96a79e1694de95e95fe3df5ab7
-PeerID:  16Uiu2HAm3cGgUdycLBx3zeKiJnVaLWVgPwcJYM8LSgiJh7fyiPYU
+peer-id:  16Uiu2HAm3cGgUdycLBx3zeKiJnVaLWVgPwcJYM8LSgiJh7fyiPYU
 ipv4: 192.168.1.9
 tcp: 56114
-clusterID:  16
+cluster-id:  16
 shards:  [64 32]
 Wakuv2 Protocols Supported:
 /vac/waku/relay/2.0.0
 /vac/waku/filter-subscribe/2.0.0-beta1
 /vac/waku/lightpush/2.0.0-beta1
-Multiaddresses:
+multiaddresses:
 /ip4/192.168.1.9/tcp/56114/p2p/16Uiu2HAm3cGgUdycLBx3zeKiJnVaLWVgPwcJYM8LSgiJh7fyiPYU
 /dns4/boot-01.do-ams3.shards.test.status.im/tcp/30303/p2p/16Uiu2HAmAR24Mbb6VuzoyUiGx42UenDkshENVDj4qnmmbabLvo31/p2p-circuit/p2p/16Uiu2HAm3cGgUdycLBx3zeKiJnVaLWVgPwcJYM8LSgiJh7fyiPYU```
 

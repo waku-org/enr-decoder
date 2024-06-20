@@ -33,8 +33,8 @@ func main() {
 
 	fmt.Println("seq:", node.Record().Seq())
 	fmt.Println("signature:", "0x"+hex.EncodeToString(node.Record().Signature()))
-	fmt.Println("PeerID: ", peerID)
-	ip, err := GetValue(node.Record(), "ip")
+	fmt.Println("peer-id: ", peerID)
+	ip, err := GetValue(node.Record(), "ip-addr")
 	if err != nil {
 		panic(err)
 	} else {
@@ -52,7 +52,7 @@ func main() {
 		panic(err)
 	} else {
 		if len(port) > 0 {
-			fmt.Println("tcp:", binary.BigEndian.Uint16(port))
+			fmt.Println("tcp-port:", binary.BigEndian.Uint16(port))
 		} else {
 			fmt.Println("ipv4: field has no value")
 		}
@@ -62,11 +62,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("clusterID: ", shards.ClusterID)
+	fmt.Println("cluster-id: ", shards.ClusterID)
 	fmt.Println("shards: ", shards.ShardIDs)
 	DecodeWaku2ENRField(node.Record())
 
-	fmt.Println("Multiaddresses:")
+	fmt.Println("multiaddresses:")
 	for _, maddr := range multiaddrs {
 		fmt.Println(maddr)
 	}

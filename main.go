@@ -62,8 +62,14 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("cluster-id: ", shards.ClusterID)
-	fmt.Println("shards: ", shards.ShardIDs)
+	if shards != nil {
+		fmt.Println("cluster-id: ", shards.ClusterID)
+		fmt.Println("shards: ", shards.ShardIDs)
+	} else {
+		fmt.Println("cluster-id:", "not available")
+		fmt.Println("shards:", "not available")
+	}
+
 	DecodeWaku2ENRField(node.Record())
 
 	fmt.Println("multiaddresses:")

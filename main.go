@@ -34,7 +34,7 @@ func main() {
 	fmt.Println("seq:", node.Record().Seq())
 	fmt.Println("signature:", "0x"+hex.EncodeToString(node.Record().Signature()))
 	fmt.Println("peer-id: ", peerID)
-	ip, err := GetValue(node.Record(), "ip-addr")
+	ip, err := GetValue(node.Record(), "ip")
 	if err != nil {
 		panic(err)
 	} else {
@@ -54,7 +54,17 @@ func main() {
 		if len(port) > 0 {
 			fmt.Println("tcp-port:", binary.BigEndian.Uint16(port))
 		} else {
-			fmt.Println("ipv4: field has no value")
+			fmt.Println("tcp-port:: field has no value")
+		}
+	}
+	uport, err := GetValue(node.Record(), "udp")
+	if err != nil {
+		panic(err)
+	} else {
+		if len(uport) > 0 {
+			fmt.Println("udp-port:", binary.BigEndian.Uint16(uport))
+		} else {
+			fmt.Println("udp-port: field has no value")
 		}
 	}
 
